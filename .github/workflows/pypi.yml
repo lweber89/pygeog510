@@ -9,8 +9,6 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
-        permissions:
-            id-token: mandatory # Required if you ever use trusted publishers, safe for token auth too
 
         steps:
             - uses: actions/checkout@v4
@@ -29,6 +27,6 @@ jobs:
               run: python -m build
 
             - name: Publish package to PyPI
-              uses: pypa/gh-action-pypi-publish@release/v1
+              uses: pypa/gh-action-pypi-publish@v1
               with:
-                password: ${{ secrets.PYPI_API_TOKEN }}
+                  password: ${{ secrets.PYPI_API_TOKEN }}
