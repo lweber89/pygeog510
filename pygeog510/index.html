@@ -706,6 +706,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pygeog510.pygeog510.Map.add_layer_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        add_layer_control()
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -837,6 +848,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pygeog510.pygeog510.Map.add_layer_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        add_layer_control()
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -899,15 +921,13 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p><em>summary</em></p>
 
         <details class="quote">
           <summary>Source code in <code>pygeog510/pygeog510.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Map</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">Map</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""_summary_"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">"600px"</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""_summary_</span>
+<span class="w">        </span><span class="sd">"""Initialize Map class</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            center (list, optional): _description_. Defaults to [20, 0].</span>
@@ -918,7 +938,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span><span class="s2">"OpenTopoMap"</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""_summary_</span>
+<span class="w">        </span><span class="sd">"""Adds a basemap to the map based on user input (or defaults to OpenTopoMap)</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            basemap (str, optional): _description_. Defaults to "OpenTopoMap".</span>
@@ -960,6 +980,11 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="k">if</span> <span class="n">zoom_to_layer</span><span class="p">:</span>
             <span class="n">bounds</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">total_bounds</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">([[</span><span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">bounds</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">2</span><span class="p">]]])</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Adds a layer control widget to the map."""</span>
+        <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">"topright"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
 </code></pre></div>
         </details>
 
@@ -990,7 +1015,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p><em>summary</em></p>
+      <p>Initialize Map class</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1026,7 +1051,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <details class="quote">
           <summary>Source code in <code>pygeog510/pygeog510.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">"600px"</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""_summary_</span>
+<span class="w">    </span><span class="sd">"""Initialize Map class</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        center (list, optional): _description_. Defaults to [20, 0].</span>
@@ -1055,7 +1080,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p><em>summary</em></p>
+      <p>Adds a basemap to the map based on user input (or defaults to OpenTopoMap)</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1079,7 +1104,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <details class="quote">
           <summary>Source code in <code>pygeog510/pygeog510.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span><span class="s2">"OpenTopoMap"</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""_summary_</span>
+<span class="w">    </span><span class="sd">"""Adds a basemap to the map based on user input (or defaults to OpenTopoMap)</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        basemap (str, optional): _description_. Defaults to "OpenTopoMap".</span>
@@ -1196,6 +1221,34 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <span class="k">if</span> <span class="n">zoom_to_layer</span><span class="p">:</span>
         <span class="n">bounds</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">total_bounds</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">([[</span><span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">bounds</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">2</span><span class="p">]]])</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="pygeog510.pygeog510.Map.add_layer_control" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#pygeog510.pygeog510.Map.add_layer_control" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a layer control widget to the map.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>pygeog510/pygeog510.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Adds a layer control widget to the map."""</span>
+    <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">"topright"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
