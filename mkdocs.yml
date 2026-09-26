@@ -80,7 +80,8 @@ nav:
     - Changelog: changelog.md
     - Report Issues: https://github.com/lweber89/pygeog510/issues
     - Examples:
-        - examples/intro.ipynb
+        - examples/map.ipynb
+        - examples/foliumap.ipynb
     - API Reference:
           - pygeog510 module: pygeog510.md
-          - common module: common.md
+          - foliumap module: foliumap.md
