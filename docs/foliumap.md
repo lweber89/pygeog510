@@ -1,4 +1,4 @@
 
-# pygeog510 module
+# foliumap module
 
 ::: pygeog510.foliumap

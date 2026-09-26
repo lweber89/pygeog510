@@ -3,7 +3,7 @@ import ipyleaflet
 
 class Map(ipyleaflet.Map):
 
-    def __init__(self, center=[20, 0], zoom=2, height="600px", **kwargs):
+    def __init__(self, center=[20, 0], zoom=2, height="600px", **kwargs):  # noqa: B006
         """Initialize Map class
 
         Args:

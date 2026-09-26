@@ -5,5 +5,5 @@ __email__ = "lweber89@gmail.com"
 __version__ = "0.1.0"
 
 # Explicitly import your modules or specific classes to avoid name collisions
-from .foliumap import Map as foliumMap
-from .pygeog510 import Map as ipyMap
+from .foliumap import Map as foliumMap  # noqa: F401
+from .pygeog510 import Map as ipyMap  # noqa: F401
