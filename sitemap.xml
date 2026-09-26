@@ -21,6 +21,10 @@
          <lastmod>2026-09-26</lastmod>
     </url>
     <url>
+         <loc>https://lweber89.github.io/pygeog510/foliumap/</loc>
+         <lastmod>2026-09-26</lastmod>
+    </url>
+    <url>
          <loc>https://lweber89.github.io/pygeog510/installation/</loc>
          <lastmod>2026-09-26</lastmod>
     </url>
@@ -33,7 +37,15 @@
          <lastmod>2026-09-26</lastmod>
     </url>
     <url>
+         <loc>https://lweber89.github.io/pygeog510/examples/foliumap/</loc>
+         <lastmod>2026-09-26</lastmod>
+    </url>
+    <url>
          <loc>https://lweber89.github.io/pygeog510/examples/intro/</loc>
+         <lastmod>2026-09-26</lastmod>
+    </url>
+    <url>
+         <loc>https://lweber89.github.io/pygeog510/examples/map/</loc>
          <lastmod>2026-09-26</lastmod>
     </url>
 </urlset>
