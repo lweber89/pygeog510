@@ -2,10 +2,9 @@ import ipyleaflet
 
 
 class Map(ipyleaflet.Map):
-    """_summary_"""
 
     def __init__(self, center=[20, 0], zoom=2, height="600px", **kwargs):
-        """_summary_
+        """Initialize Map class
 
         Args:
             center (list, optional): _description_. Defaults to [20, 0].
@@ -16,7 +15,7 @@ class Map(ipyleaflet.Map):
         self.layout.height = height
 
     def add_basemap(self, basemap="OpenTopoMap"):
-        """_summary_
+        """Adds a basemap to the map based on user input (or defaults to OpenTopoMap)
 
         Args:
             basemap (str, optional): _description_. Defaults to "OpenTopoMap".
@@ -58,3 +57,8 @@ class Map(ipyleaflet.Map):
         if zoom_to_layer:
             bounds = gdf.total_bounds
             self.fit_bounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]])
+
+    def add_layer_control(self):
+        """Adds a layer control widget to the map."""
+        control = ipyleaflet.LayersControl(position="topright")
+        self.add_control(control)
