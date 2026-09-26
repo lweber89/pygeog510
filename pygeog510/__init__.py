@@ -3,3 +3,5 @@
 __author__ = """Lloyd Weber"""
 __email__ = "lweber89@gmail.com"
 __version__ = "0.1.0"
+
+from .pygeog510 import *
