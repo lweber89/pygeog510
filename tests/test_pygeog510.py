@@ -2,7 +2,6 @@
 
 """Tests for `pygeog510` package."""
 
-
 import unittest
 
 from pygeog510 import pygeog510
